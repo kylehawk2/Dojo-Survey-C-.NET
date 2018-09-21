@@ -20,17 +20,13 @@ namespace Dojo_Survey
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            app.UseMvc();   
+        {   
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseMvc();
+            app.UseStaticFiles();
         }
         public Startup(IHostingEnvironment env)
         {

@@ -11,7 +11,7 @@ namespace Dojo_Survey.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
         [Route("result")]
         public IActionResult result(string name, string location, string langauge, string comment){
             ViewBag.name = name;
